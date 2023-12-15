@@ -1,0 +1,116 @@
+* {
+  font-family: "Inter", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #fefae0;
+}
+
+h1 {
+  margin-top: 0;
+  color: #023047;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  max-width: 600px;
+  margin: 32px auto;
+  background-color: white;
+  padding: 16px 32px;
+  box-shadow: 0 4px 40px -8px rgba(0,0,0,0.2);
+  border-radius: 10px;
+}
+
+.container form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.container form label {
+  background-color: #a2d2ff;
+  color: #023047;
+  height: 40px;
+  width: 100px;
+  display: flex;
+  border-radius: 30px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.container form input[type="radio"]:checked + label {
+  background-color: #023047;
+  color: white;
+  font-weight: bold;
+}
+
+.container .choices {
+  display: flex;
+  gap: 20px;
+}
+
+.container form input[type="radio"] {
+  display: none;
+}
+
+.container textarea {
+  padding: 16px;
+  font-size: 20px;
+  height: 140px;
+  resize: none;
+  line-height: 1.7;
+  border: 1px solid #023047;
+}
+
+.container button {
+  padding: 8px;
+  font-size: 20px;
+  border: 0;
+  background-color: #E63946;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.translation {
+  padding: 12px 32px;
+  background-color: #EDF2F4;
+  margin-top: 20px;
+  font-size: 20px;
+  line-height: 1.7;
+  height: 140px;
+  overflow-y: scroll;
+  position: relative;
+}
+
+.translation .copy-btn {
+  position: absolute;
+  width: 20px;
+  top: 12px;
+  right: 12px;
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.notification {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 100px);
+  background-color: #023047;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 30px;
+  transition: all 400ms ease;
+}
+
+.notification.active {
+  transform: translate(-50%, -30px);
+}
+
+.error {
+  color: red;
+}
